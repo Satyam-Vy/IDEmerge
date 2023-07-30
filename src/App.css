@@ -1,38 +1,192 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.homePageWrapper{
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  color: #fff;
+}
+
+.formWrapper{
+  background: #282a36;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+}
+
+.title{
+  display: flex;
+  justify-content: flex-start ;
+  gap: 40px;
+}
+
+.ide{
+  margin-top: 56px;
+  font-size: 1.6rem;
+}
+
+.inputGroup{
+  display: flex;
+  flex-direction: column;
+}
+
+.mainLabel{
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+.inputBox{
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  margin-bottom: 14px;
+  background: #eee;
+  font-size: 16px;
+  font-weight: bold;
+
+}
+
+.btn{
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition:  all 0.3s ease-in-out;
+}
+
+
+
+
+.button , .leaveBtn {
+  width: 100px;
+  margin-top:13px ;
+  margin-bottom: 13px;
+  margin-left: auto;
+  position: relative;
+  border: 3px ridge #149CEA;
+  outline: none;
+  background-color: #282a36;
   color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.button::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #282a36;
+  transition: 0.5s;
+  transform-origin: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #282a36;
+  transition: 0.5s;
+}
+
+.button:hover::before, button:hover::after {
+  transform: scale(0)
+}
+
+.button:hover {
+  box-shadow: inset 0px 0px 25px #1479EA;
+}
+
+.createInfo{
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.createNewBtn{
+  color: #87CEFA;
+  text-decoration: none;
+  border-bottom: 1px solid #87CEFA;
+  transition:  all 0.3s ease-in-out;
+}
+.createNewBtn:hover , footer a:hover {
+
+  color: #1479EA;
+  border-color: #1479EA;
+
+}
+
+.mainWrap{
+  display: grid;
+  grid-template-columns: 230px 1fr;
+}
+
+.aside{
+  background: #1c1e29;
+  padding: 16px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.asideInner{
+  flex: 1;
+}
+
+.clientsList{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.client{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.username{
+  margin-top: 10px;
+}
+
+.logo{
+  border-bottom: 1px solid #424242 ;
+  padding-left: 29.7px;
+  
+}
+
+.logoImage{
+  height: 125px;
+  width: 125px;
+}
+
+.leaveBtn{
+  width: 100%;
+  margin-top: 20px;
+}
+
+.CodeMirror{
+  min-height: calc(100vh - 20px);
+  font-size: 20px;
+  line-height: 1.6;
+  padding-top: 20px;
+
 }
